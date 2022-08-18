@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <meta name="description" content="A simple HTML5 Template for new projects.">
+  <meta name="author" content="SitePoint">
+
+  <meta property="og:title" content="A Basic HTML5 Template">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.sitepoint.com/a-basic-html5-template/">
+  <meta property="og:description" content="A simple HTML5 Template for new projects.">
+  <meta property="og:image" content="image.png">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png"> 
+  <title> Student Information</title>
+  <style>
+  table,th,tr,tr,td{
+      border: 1px solid black
+  }
+  </style>
+
+</head>
+
+<body>
+  <!-- your content here... -->
+ <table>
+  <h2>Student Information</h2>
+  <th>Id</th>
+  <th>Name</th>
+  <th>Roll</th>
+  <th>City</th>
+  <th>Marks</th>
+  <th>Passing Year</th>
+ {% comment %} {% for student in students %} {% endcomment %}
+  <tr>
+    <td>{{ student.id}}</td>
+    <td>{{ student.name}}</td>
+    <td>{{ student.roll}}</td>
+    <td>{{ student.city}}</td>
+    <td>{{ student.marks}}</td>
+    <td>{{ student.pass_date}}</td>
+  </tr>
+ {% comment %} {% endfor %} {% endcomment %}
+
+  </table> 
+
+  {% comment %} <h2>Student Information</h2> {% endcomment %}
+{% comment %} 
+  {% for student in students%}
+    {{ student.id}}
+    {{ student.name}}
+    {{ student.roll}}
+    {{ student.city}}
+    {{ student.marks}}
+    {{ student.pass_date}}
+  {% endfor %} {% endcomment %}
+
+
+  
+  {% comment %} <script src="js/scripts.js"></script> {% endcomment %}
+</body>
+</html>
